@@ -54,7 +54,7 @@ const Message = () => {
   };
 
   return (
-    <div className="w-1/2 h-screen flex justify-center">
+    <div className="w-screen h-screen flex justify-center">
       <div className="bg-gray-800 font-medium border-2 w-10/12 text-white h-screen flex flex-col gap-2 justify-between items-start">
         {messages.map((message) => (
           <div key={message.id} className="flex h-20  mt-2 gap-2">
