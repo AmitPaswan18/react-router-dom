@@ -1,4 +1,3 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import NavBar from "./components/NavBar.jsx";
@@ -6,33 +5,17 @@ import About from "./components/common/About.jsx";
 import Contact from "./components/common/Contact.jsx";
 import Messages from "./components/common/Messages.jsx";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <NavBar />,
-  },
-  {
-    path: "/about",
-    element: <About />,
-  },
-  {
-    path: "/contact",
-    element: <Contact />,
-  },
-  {
-    path: "/messages",
-    element: <Messages />,
-  },
-  {
-    path: "/messages/:messageId",
-    element: <Messages />,
-  },
-]);
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ShowMessages from "./components/common/ShowMessages.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <Router>
+    <Routes>
+      <Route path="/" element={<NavBar />} />
+      <Route path="about" element={<About />} />
+      <Route path="contact" element={<Contact />} />
+      <Route path="messages" element={<Messages />} />
+      <Route path="messages/:messageId" element={<ShowMessages />} />
+    </Routes>
+  </Router>
 );
