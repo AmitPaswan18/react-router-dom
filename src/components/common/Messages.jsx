@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Messages = () => {
   const messages = [
@@ -46,8 +47,11 @@ const Messages = () => {
 
   const [activeMessage, setActiveMessage] = useState(null);
 
+  const navigate = useNavigate();
+
   const handleShowMessage = (messageId) => {
     setActiveMessage(messageId);
+    navigate(`/messages/${messageId}`);
   };
 
   return (

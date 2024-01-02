@@ -25,6 +25,10 @@ const router = createBrowserRouter([
     path: "/messages",
     element: <Messages />,
   },
+  {
+    path: "/messages/:messageId",
+    element: <Messages />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
