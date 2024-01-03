@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { messages } from "../../utils";
+import { messages } from "../utils";
 
 const Message = () => {
   const [active, setActive] = useState(true);

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { messages } from "../../utils";
+import { messages } from "../utils";
 
 const ShowMessages = () => {
   const { messageId } = useParams();
